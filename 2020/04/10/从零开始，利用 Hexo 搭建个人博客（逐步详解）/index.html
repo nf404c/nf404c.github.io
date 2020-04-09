@@ -5,15 +5,61 @@
   
 
   
-  <title>nf404c &#39;s blog</title>
+  <title>从零开始，利用 Hexo 搭建个人博客（逐步详解） | nf404c &#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="nf404c &#39;s blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="前情提要： 本次搭建使用环境为 Windows 10 专业版 ，版本号为 1909 ，当前日期是 2020年4月9日 ，个人已经完全搭建完毕并且可以直接访问（只是界面比较简陋，需要以后慢慢完善）。 主要使用 cmd 控制台，注意：控制台需要以管理员身份运行，过程中会详细讲解。 如果在安装过程中出错&#x2F;卡住，请尝试重来一遍（甚至几遍）当前操作，或将前面的操作逐一检查，或寻求百度（Google），相信你">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从零开始，利用 Hexo 搭建个人博客（逐步详解）">
+<meta property="og:url" content="http://yoursite.com/2020/04/10/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%EF%BC%8C%E5%88%A9%E7%94%A8%20Hexo%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E9%80%90%E6%AD%A5%E8%AF%A6%E8%A7%A3%EF%BC%89/index.html">
 <meta property="og:site_name" content="nf404c &#39;s blog">
+<meta property="og:description" content="前情提要： 本次搭建使用环境为 Windows 10 专业版 ，版本号为 1909 ，当前日期是 2020年4月9日 ，个人已经完全搭建完毕并且可以直接访问（只是界面比较简陋，需要以后慢慢完善）。 主要使用 cmd 控制台，注意：控制台需要以管理员身份运行，过程中会详细讲解。 如果在安装过程中出错&#x2F;卡住，请尝试重来一遍（甚至几遍）当前操作，或将前面的操作逐一检查，或寻求百度（Google），相信你">
 <meta property="og:locale" content="Ch">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200409225916166.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L25mNDA0Yw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200409230201356.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200409230237773.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200409230344576.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L25mNDA0Yw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200409230410483.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200409230434672.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200409231040698.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020040923133317.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L25mNDA0Yw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200409231350364.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200409231418174.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L25mNDA0Yw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200409231444475.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L25mNDA0Yw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200409231504848.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200409231549694.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200409231626149.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200409231637164.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L25mNDA0Yw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200409231734369.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200409231807138.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L25mNDA0Yw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200409231831929.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/202004100003414.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L25mNDA0Yw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200409232251271.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200410000202582.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200409232312172.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L25mNDA0Yw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200410000127608.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200410000050637.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L25mNDA0Yw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200410001646762.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200410001259579.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200409232532730.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200409232545455.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200409232719421.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L25mNDA0Yw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020040923273988.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L25mNDA0Yw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200409232755186.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L25mNDA0Yw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200409232821287.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L25mNDA0Yw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200409235230183.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200409235152460.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020040923300027.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L25mNDA0Yw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200409233043397.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L25mNDA0Yw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200409235055104.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020040923310983.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200409233131356.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200409233213554.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200409233230218.png">
+<meta property="article:published_time" content="2020-04-09T16:24:31.784Z">
+<meta property="article:modified_time" content="2020-04-09T16:17:52.057Z">
 <meta property="article:author" content="nf404c">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200409225916166.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L25mNDA0Yw==,size_16,color_FFFFFF,t_70">
   
     <link rel="alternate" href="/atom.xml" title="nf404c &#39;s blog" type="application/atom+xml">
   
@@ -62,9 +108,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-从零开始，利用 Hexo 搭建个人博客（逐步详解）" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-从零开始，利用 Hexo 搭建个人博客（逐步详解）" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/04/10/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%EF%BC%8C%E5%88%A9%E7%94%A8%20Hexo%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E9%80%90%E6%AD%A5%E8%AF%A6%E8%A7%A3%EF%BC%89/" class="article-date">
   <time datetime="2020-04-09T16:24:31.784Z" itemprop="datePublished">2020-04-10</time>
@@ -77,8 +121,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/10/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%EF%BC%8C%E5%88%A9%E7%94%A8%20Hexo%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E9%80%90%E6%AD%A5%E8%AF%A6%E8%A7%A3%EF%BC%89/">从零开始，利用 Hexo 搭建个人博客（逐步详解）</a>
+    <h1 class="article-title" itemprop="name">
+      从零开始，利用 Hexo 搭建个人博客（逐步详解）
     </h1>
   
 
@@ -329,105 +373,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-This-is-my-first-blog" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/04/09/This-is-my-first-blog/" class="article-date">
-  <time datetime="2020-04-09T07:15:44.000Z" itemprop="datePublished">2020-04-09</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/09/This-is-my-first-blog/">This is my first blog</a>
-    </h1>
+    <a href="/2020/04/09/This-is-my-first-blog/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">This is my first blog</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Hi-there-this-is-my-first-blog-post"><a href="#Hi-there-this-is-my-first-blog-post" class="headerlink" title="Hi there,this is my first blog post."></a>Hi there,this is my first blog post.</h2><h3 id="Congratulation-to-myself"><a href="#Congratulation-to-myself" class="headerlink" title="Congratulation to myself !"></a>Congratulation to myself !</h3><h4 id="That’s-all"><a href="#That’s-all" class="headerlink" title="That’s all."></a>That’s all.</h4><h5 id="See-you-next-time"><a href="#See-you-next-time" class="headerlink" title="See you next time~"></a>See you next time~</h5><p>This is a test file.</p>
-<ul>
-<li><p>By the way , markdown is really good to use.</p>
-</li>
-<li><p>I suggest you to try to use markdown and hope you enjoy it.</p>
-</li>
-<li><p>I love it!</p>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/09/This-is-my-first-blog/" data-id="ck8si6fqy0000okzif1iz2xjl" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/04/09/hello-world/" class="article-date">
-  <time datetime="2020-04-09T06:36:17.952Z" itemprop="datePublished">2020-04-09</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/09/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/09/hello-world/" data-id="ck8si6fr30001okzi3dsq9smr" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
 
 </section>
         
