@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-04-10T01:45:20.064Z</updated>
+  <updated>2020-04-11T15:14:57.810Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,105 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java选择结构+局部变量</title>
+    <link href="http://yoursite.com/2020/04/11/Java%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84+%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F/"/>
+    <id>http://yoursite.com/2020/04/11/Java%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84+%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F/</id>
+    <published>2020-04-11T15:11:14.000Z</published>
+    <updated>2020-04-11T15:14:57.810Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;选择结构&quot;&gt;&lt;a href=&quot;#选择结构&quot; class=&quot;headerlink&quot; title=&quot;选择结构&quot;&gt;&lt;/a&gt;选择结构&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;根据已知条件进行逻辑判断，满足条件后执行相关操作。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;1-基本if选择结构&quot;&gt;&lt;a href=&quot;#1-基本if选择结构&quot; class=&quot;headerlink&quot; title=&quot;1. 基本if选择结构&quot;&gt;&lt;/a&gt;1. 基本if选择结构&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;语法：&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; （布尔表达式）&amp;#123;&lt;span class=&quot;comment&quot;&gt;//检测布尔表达式是否true，若true则执行括号内代码块，若false则跳过执行后续代码&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;comment&quot;&gt;//代码块&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;后续代码。。。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;TestBasicIf&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(String[] args)&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    	&lt;span class=&quot;comment&quot;&gt;//假设场景，Javak考试满分，奖励iPhone 11 Pro Max 512G&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;double&lt;/span&gt; score = &lt;span class=&quot;number&quot;&gt;99&lt;/span&gt;D;&lt;span class=&quot;comment&quot;&gt;// 99.0 两种方法表示&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (score == &lt;span class=&quot;number&quot;&gt;100.0&lt;/span&gt;)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        	&lt;span class=&quot;comment&quot;&gt;//执行if的逻辑代码块&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            System.out.println(&lt;span class=&quot;string&quot;&gt;&quot;恭喜获得满分，奖励iPhone 11 Pro Max 512G&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;//常规代码&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        System.out.println(&lt;span class=&quot;string&quot;&gt;&quot;程序结束&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;执行流程：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对布尔表达式进行判断。&lt;/li&gt;
+&lt;li&gt;结果为true，则先执行代码块，再执行后续代码。&lt;/li&gt;
+&lt;li&gt;结果为false，则跳过代码块，直接执行后续代码。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Java基础篇</title>
+    <link href="http://yoursite.com/2020/04/11/Java%E5%9F%BA%E7%A1%80%E7%AF%87/"/>
+    <id>http://yoursite.com/2020/04/11/Java%E5%9F%BA%E7%A1%80%E7%AF%87/</id>
+    <published>2020-04-11T15:04:54.000Z</published>
+    <updated>2020-04-11T15:10:27.451Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前置知识&quot;&gt;&lt;a href=&quot;#前置知识&quot; class=&quot;headerlink&quot; title=&quot;前置知识&quot;&gt;&lt;/a&gt;前置知识&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;ol&gt;
+&lt;li&gt;什么是&lt;strong&gt;内存&lt;/strong&gt;？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;内存是瞬时状态下的存储空间，造价高、工业上的设计瓶颈&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;Java 虚拟机（Java程序）默认分配到的物理内存是 电脑内存的 1/8 .（32*1/8=4）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;&lt;strong&gt;bit（位）&lt;/strong&gt;-&amp;gt; &lt;strong&gt;Byte（字节）&lt;/strong&gt; -&amp;gt; KB -&amp;gt; MB -&amp;gt; GB -&amp;gt; TB -&amp;gt; PB -&amp;gt; EB -&amp;gt; ZB -&amp;gt; YB -&amp;gt; BB -&amp;gt; NB -&amp;gt; DB -&amp;gt; CB -&amp;gt; XB         8 bit = 1 Byte     剩下的都是 1024 进位&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Java前置基础</title>
+    <link href="http://yoursite.com/2020/04/11/Java%E5%89%8D%E7%BD%AE%E5%9F%BA%E7%A1%80/"/>
+    <id>http://yoursite.com/2020/04/11/Java%E5%89%8D%E7%BD%AE%E5%9F%BA%E7%A1%80/</id>
+    <published>2020-04-11T14:54:13.000Z</published>
+    <updated>2020-04-11T15:04:27.918Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Java设计理念&quot;&gt;&lt;a href=&quot;#Java设计理念&quot; class=&quot;headerlink&quot; title=&quot;Java设计理念&quot;&gt;&lt;/a&gt;Java设计理念&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Write Once Run Anywhere&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;名词解释：&quot;&gt;&lt;a href=&quot;#名词解释：&quot; class=&quot;headerlink&quot; title=&quot;名词解释：&quot;&gt;&lt;/a&gt;名词解释：&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;JVM&lt;/strong&gt; (Java Virtual Machine) &lt;strong&gt;虚拟机&lt;/strong&gt;：&lt;ul&gt;
+&lt;li&gt;使用软件在不同操作系统中，模拟相同的环境。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;JRE&lt;/strong&gt; (Java Runtime Environment) &lt;strong&gt;运行环境&lt;/strong&gt;：&lt;ul&gt;
+&lt;li&gt;包含JVM和解释器，完整的Java运行环境。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;JDK&lt;/strong&gt; (Java Development Kit) &lt;strong&gt;开发环境&lt;/strong&gt;：&lt;ul&gt;
+&lt;li&gt;包含JRE+类库+开发工具包（编译器+调试工具）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>从零开始，利用 Hexo 搭建个人博客（逐步详解）</title>
