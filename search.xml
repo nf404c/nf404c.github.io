@@ -837,4 +837,111 @@ System.out.println(d);<span class="comment">//通过，输出结果 123.0</span>
 </ul>
 ]]></content>
   </entry>
+  <entry>
+    <title>循环结构</title>
+    <url>/2020/04/13/%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/</url>
+    <content><![CDATA[<h2 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h2><ul>
+<li>概念： 通过某个条件，重复的执行一段逻辑代码。</li>
+</ul>
+<a id="more"></a>
+
+<h3 id="1-while-循环"><a href="#1-while-循环" class="headerlink" title="1. while 循环"></a>1. while 循环</h3><ul>
+<li><p>语法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> （布尔表达式）&#123;</span><br><span class="line">	<span class="comment">//逻辑代码（循环操作）</span></span><br><span class="line">&#125;</span><br><span class="line">后续代码。。。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestWhile</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">1</span>; <span class="comment">//1. 初始部分</span></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">        while (i &lt;= 10)&#123;</span></span><br><span class="line"><span class="comment">        	System.out.println("HelloWorld");//死循环</span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">        <span class="keyword">while</span> (i &lt;= <span class="number">10</span>)&#123;<span class="comment">// 2. 循环条件</span></span><br><span class="line">        	System.out.println(<span class="string">"HelloWorld"</span>);<span class="comment">// 3. 循环操作</span></span><br><span class="line">            </span><br><span class="line">            <span class="comment">//通过自增达到需求上限，结束循环并完成后续代码</span></span><br><span class="line">            i++;<span class="comment">// 4. 迭代部分（增量）</span></span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"程序结束"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>执行流程：</p>
+<ul>
+<li>先对布尔表达式进行判断，结果为 true ，则执行逻辑代码。</li>
+<li>本次执行完毕后，再次进行判断，结果仍旧为true，则再次执行逻辑代码。</li>
+<li>直至布尔表达式的结果为false时，才会退出循环结构，执行后续代码。</li>
+</ul>
+</li>
+<li><p><strong>循环的组成</strong>：   四个部分组成</p>
+<ul>
+<li><ol>
+<li><strong>初始部分</strong>：用以判断的变量</li>
+<li><strong>循环条件</strong>：决定是否继续循环的依据</li>
+<li><strong>循环操作</strong>：单次执行的逻辑代码或任务</li>
+<li><strong>迭代部分</strong>：控制循环条件改变的增量</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestCalcSum</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">    	<span class="keyword">int</span> i = <span class="number">1</span>;<span class="comment">//从1开始</span></span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (i &lt;= <span class="number">100</span>)&#123;</span><br><span class="line">        	sum = sum + i;<span class="comment">//sum += i</span></span><br><span class="line">            i++;<span class="comment">//自增1</span></span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"最终结果为"</span> + sum);<span class="comment">//经典循环（求和0-100）案例，最终结果为5050</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>while 特点</p>
+<ul>
+<li>首次判断不满足，则一次都不会执行。（执行次数 0~n 次）</li>
+<li><strong>特点：</strong>首次即有入口条件，<strong>先判断、再执行</strong>，适用于<strong>循环次数明确</strong>的情况。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">while</span> (i &lt;= <span class="number">100</span>)&#123;</span><br><span class="line">            <span class="comment">/*</span></span><br><span class="line"><span class="comment">            if ( i % 2 == 0)&#123;  // 0-100偶数和</span></span><br><span class="line"><span class="comment">                sum += i ;</span></span><br><span class="line"><span class="comment">            &#125;</span></span><br><span class="line"><span class="comment">            */</span></span><br><span class="line">            <span class="comment">/*</span></span><br><span class="line"><span class="comment">            if ( i % 2 != 0)&#123;  // 0-100奇数和</span></span><br><span class="line"><span class="comment">                sum += i ;</span></span><br><span class="line"><span class="comment">            &#125;</span></span><br><span class="line"><span class="comment">            */</span></span><br><span class="line">            <span class="comment">/*</span></span><br><span class="line"><span class="comment">            if ( i % 3 == 0)&#123;  // 0-100 3的倍数和</span></span><br><span class="line"><span class="comment">                sum += i ;</span></span><br><span class="line"><span class="comment">            &#125;</span></span><br><span class="line"><span class="comment">            */</span></span><br><span class="line">            <span class="keyword">if</span> ( i % <span class="number">3</span> == <span class="number">0</span> &amp;&amp; i % <span class="number">5</span> != <span class="number">0</span>)&#123;  <span class="comment">// 0-100 是3的倍数不是5的倍数的数字之和</span></span><br><span class="line">                sum += i ;</span><br><span class="line">            &#125;</span><br><span class="line">            i++;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(<span class="string">"程序结束，结果为："</span> + sum);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;<span class="comment">//以此类推，延续思想</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<h3 id="2-do-while-循环"><a href="#2-do-while-循环" class="headerlink" title="2. do while 循环"></a>2. do while 循环</h3><ul>
+<li><p>语法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">do</span>&#123;</span><br><span class="line">	逻辑代码（循环操作）</span><br><span class="line">&#125;<span class="keyword">while</span>(布尔表达式)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;<span class="comment">//使用控制台录入 记得导入包</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestDoWhile</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        Scanner input = <span class="keyword">new</span> Scanner(System.in);<span class="comment">// 声明Scanner</span></span><br><span class="line">    	<span class="comment">//假设场景，Tom同学完成作业，如果完成的不好，则重写。如果完成的好，则结束。</span></span><br><span class="line">        <span class="keyword">char</span> answer;<span class="comment">// 初始部分</span></span><br><span class="line">        <span class="keyword">do</span>&#123;</span><br><span class="line">            System.out.println(<span class="string">"抄写一遍：好好学习，天天向上"</span>);<span class="comment">// 循环操作</span></span><br><span class="line">            System.out.println(<span class="string">"老师给予评价："</span>);<span class="comment">// 循环操作</span></span><br><span class="line">            answer = input.next().charAt(<span class="number">0</span>);<span class="comment">// 迭代部分  控制台录入</span></span><br><span class="line">        &#125;<span class="keyword">while</span>(answer != <span class="string">'y'</span>);<span class="comment">// 循环条件 写到后面，注意要加分号 当评价不是y则返回重新循环（重写）</span></span><br><span class="line">        System.out.println(<span class="string">"恭喜通过"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>执行流程：</p>
+<ul>
+<li>先执行一次循环操作之后，再进行布尔表达式的判断。</li>
+<li>如果结果为true，则再次执行循环操作。</li>
+<li>如果结果为false，才会退出循环结构，执行后续代码。</li>
+</ul>
+</li>
+<li><p>do while <strong>特点</strong>：</p>
+<ul>
+<li><p>首次没有入口条件，<strong>先执行，再判断</strong>。</p>
+</li>
+<li><p>适用于<strong>循环次数不明确</strong>的场景</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//用 do while 打印100遍 HelloWorld</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestDoWhile</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">    	<span class="keyword">do</span>&#123;<span class="comment">//直接执行循环操作，首次没有入口条件</span></span><br><span class="line">        	System.out.println(<span class="string">"HelloWorld"</span>);</span><br><span class="line">            i++;</span><br><span class="line">        &#125;<span class="keyword">while</span>(i &lt;= <span class="number">100</span>);<span class="comment">//判断满足，则循环。不满足，则至少执行一次（执行次数共 0~n 次）</span></span><br><span class="line">        System.out.println(<span class="string">"程序结束"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="循环的注意点"><a href="#循环的注意点" class="headerlink" title="循环的注意点"></a>循环的注意点</h3><ul>
+<li><p>是否使用循环及使用步骤</p>
+<ul>
+<li><ol>
+<li>明确是否需要使用循环</li>
+<li>分析<strong>循环条件</strong>和<strong>循环操作</strong>是什么        操作：相加求和；条件：0~100</li>
+<li>循环结构的<strong>选型</strong>，用哪个循环           <strong>循环次数是否明确、首次是否需要入口条件</strong></li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>while 与 do while 的对比</p>
+<ul>
+<li><p>首次即有入口条件，先判断，再执行。适用于循环次数明确的场景。（ while ）</p>
+</li>
+<li><p>首次没有入口条件，先执行，再判断。适用于循环次数不明确的场景。（ do while ）</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-for-循环"><a href="#3-for-循环" class="headerlink" title="3. for 循环"></a>3. for 循环</h3><ul>
+<li><p>语法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> ( 初始部分 ； 循环条件 ； 迭代部分 )&#123;</span><br><span class="line">	<span class="comment">//循环操作</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestFor</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">    	<span class="comment">// 1.初始部分   2.循环条件  4.迭代部分</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span> ; i &lt;= <span class="number">100</span> ; i++ )&#123;</span><br><span class="line">        	System.out.println(<span class="string">"HelloWorld"</span> + i);<span class="comment">// 3.循环操作</span></span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"程序结束"</span>);</span><br><span class="line">        <span class="comment">//for循环与while循环相同，首次判断不满足，则一次都不会执行。（执行次数 0~n 次）</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>执行流程：</p>
+<ul>
+<li>首次执行初始部分（仅一次）。</li>
+<li>对布尔表达式进行判断，结果为 true ，则执行逻辑代码。</li>
+<li>本次执行完毕后，执行迭代部分，再次判断，结果仍旧为 true ，则再次执行逻辑代码。</li>
+<li>直至布尔表达式的结果为 false 时，才会退出循环结构，执行后续代码。</li>
+<li><strong>特点</strong>：首次即有入口条件，<strong>先判断、再执行</strong>，适用于<strong>循环次数明确</strong>的情况。（与 while 相同）</li>
+</ul>
+</li>
+</ul>
+<h3 id="【扩展】-用-while-和-for-写死循环"><a href="#【扩展】-用-while-和-for-写死循环" class="headerlink" title="【扩展】 用 while 和 for 写死循环"></a>【扩展】 用 while 和 for 写死循环</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//扩展</span></span><br><span class="line"><span class="keyword">while</span>(<span class="keyword">true</span>)&#123;<span class="comment">//true </span></span><br><span class="line">	<span class="comment">//死循环</span></span><br><span class="line">    System.out.println(<span class="string">"while..."</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (;;)&#123;</span><br><span class="line">	<span class="comment">//死循环</span></span><br><span class="line">    System.out.println(<span class="string">"for..."</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+  </entry>
 </search>

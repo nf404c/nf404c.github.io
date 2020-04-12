@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | nf404c &#39;s blog</title>
+  <title>循环结构 | nf404c &#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="nf404c &#39;s blog">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="循环结构 概念： 通过某个条件，重复的执行一段逻辑代码。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="循环结构">
+<meta property="og:url" content="http://yoursite.com/2020/04/13/%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/index.html">
 <meta property="og:site_name" content="nf404c &#39;s blog">
+<meta property="og:description" content="循环结构 概念： 通过某个条件，重复的执行一段逻辑代码。">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-04-12T16:08:14.000Z">
+<meta property="article:modified_time" content="2020-04-12T16:10:41.392Z">
 <meta property="article:author" content="nf404c">
 <meta name="twitter:card" content="summary">
   
@@ -130,211 +134,236 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-循环结构" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      循环结构
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/13/%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/" class="archive-article-date">
+
+        
+        <a href="/2020/04/13/%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/" class="archive-article-date">
   	<time datetime="2020-04-12T16:08:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-13</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/13/%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/">循环结构</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h2><ul>
+<li>概念： 通过某个条件，重复的执行一段逻辑代码。</li>
+</ul>
+<a id="more"></a>
 
-        <div class="article-info info-on-right">
-          
-          
+<h3 id="1-while-循环"><a href="#1-while-循环" class="headerlink" title="1. while 循环"></a>1. while 循环</h3><ul>
+<li><p>语法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> （布尔表达式）&#123;</span><br><span class="line">	<span class="comment">//逻辑代码（循环操作）</span></span><br><span class="line">&#125;</span><br><span class="line">后续代码。。。</span><br></pre></td></tr></table></figure>
 
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestWhile</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">1</span>; <span class="comment">//1. 初始部分</span></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">        while (i &lt;= 10)&#123;</span></span><br><span class="line"><span class="comment">        	System.out.println("HelloWorld");//死循环</span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">        <span class="keyword">while</span> (i &lt;= <span class="number">10</span>)&#123;<span class="comment">// 2. 循环条件</span></span><br><span class="line">        	System.out.println(<span class="string">"HelloWorld"</span>);<span class="comment">// 3. 循环操作</span></span><br><span class="line">            </span><br><span class="line">            <span class="comment">//通过自增达到需求上限，结束循环并完成后续代码</span></span><br><span class="line">            i++;<span class="comment">// 4. 迭代部分（增量）</span></span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"程序结束"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>执行流程：</p>
+<ul>
+<li>先对布尔表达式进行判断，结果为 true ，则执行逻辑代码。</li>
+<li>本次执行完毕后，再次进行判断，结果仍旧为true，则再次执行逻辑代码。</li>
+<li>直至布尔表达式的结果为false时，才会退出循环结构，执行后续代码。</li>
+</ul>
+</li>
+<li><p><strong>循环的组成</strong>：   四个部分组成</p>
+<ul>
+<li><ol>
+<li><strong>初始部分</strong>：用以判断的变量</li>
+<li><strong>循环条件</strong>：决定是否继续循环的依据</li>
+<li><strong>循环操作</strong>：单次执行的逻辑代码或任务</li>
+<li><strong>迭代部分</strong>：控制循环条件改变的增量</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestCalcSum</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">    	<span class="keyword">int</span> i = <span class="number">1</span>;<span class="comment">//从1开始</span></span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (i &lt;= <span class="number">100</span>)&#123;</span><br><span class="line">        	sum = sum + i;<span class="comment">//sum += i</span></span><br><span class="line">            i++;<span class="comment">//自增1</span></span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"最终结果为"</span> + sum);<span class="comment">//经典循环（求和0-100）案例，最终结果为5050</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>while 特点</p>
+<ul>
+<li>首次判断不满足，则一次都不会执行。（执行次数 0~n 次）</li>
+<li><strong>特点：</strong>首次即有入口条件，<strong>先判断、再执行</strong>，适用于<strong>循环次数明确</strong>的情况。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">while</span> (i &lt;= <span class="number">100</span>)&#123;</span><br><span class="line">            <span class="comment">/*</span></span><br><span class="line"><span class="comment">            if ( i % 2 == 0)&#123;  // 0-100偶数和</span></span><br><span class="line"><span class="comment">                sum += i ;</span></span><br><span class="line"><span class="comment">            &#125;</span></span><br><span class="line"><span class="comment">            */</span></span><br><span class="line">            <span class="comment">/*</span></span><br><span class="line"><span class="comment">            if ( i % 2 != 0)&#123;  // 0-100奇数和</span></span><br><span class="line"><span class="comment">                sum += i ;</span></span><br><span class="line"><span class="comment">            &#125;</span></span><br><span class="line"><span class="comment">            */</span></span><br><span class="line">            <span class="comment">/*</span></span><br><span class="line"><span class="comment">            if ( i % 3 == 0)&#123;  // 0-100 3的倍数和</span></span><br><span class="line"><span class="comment">                sum += i ;</span></span><br><span class="line"><span class="comment">            &#125;</span></span><br><span class="line"><span class="comment">            */</span></span><br><span class="line">            <span class="keyword">if</span> ( i % <span class="number">3</span> == <span class="number">0</span> &amp;&amp; i % <span class="number">5</span> != <span class="number">0</span>)&#123;  <span class="comment">// 0-100 是3的倍数不是5的倍数的数字之和</span></span><br><span class="line">                sum += i ;</span><br><span class="line">            &#125;</span><br><span class="line">            i++;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(<span class="string">"程序结束，结果为："</span> + sum);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;<span class="comment">//以此类推，延续思想</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<h3 id="2-do-while-循环"><a href="#2-do-while-循环" class="headerlink" title="2. do while 循环"></a>2. do while 循环</h3><ul>
+<li><p>语法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span>&#123;</span><br><span class="line">	逻辑代码（循环操作）</span><br><span class="line">&#125;<span class="keyword">while</span>(布尔表达式)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;<span class="comment">//使用控制台录入 记得导入包</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestDoWhile</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        Scanner input = <span class="keyword">new</span> Scanner(System.in);<span class="comment">// 声明Scanner</span></span><br><span class="line">    	<span class="comment">//假设场景，Tom同学完成作业，如果完成的不好，则重写。如果完成的好，则结束。</span></span><br><span class="line">        <span class="keyword">char</span> answer;<span class="comment">// 初始部分</span></span><br><span class="line">        <span class="keyword">do</span>&#123;</span><br><span class="line">            System.out.println(<span class="string">"抄写一遍：好好学习，天天向上"</span>);<span class="comment">// 循环操作</span></span><br><span class="line">            System.out.println(<span class="string">"老师给予评价："</span>);<span class="comment">// 循环操作</span></span><br><span class="line">            answer = input.next().charAt(<span class="number">0</span>);<span class="comment">// 迭代部分  控制台录入</span></span><br><span class="line">        &#125;<span class="keyword">while</span>(answer != <span class="string">'y'</span>);<span class="comment">// 循环条件 写到后面，注意要加分号 当评价不是y则返回重新循环（重写）</span></span><br><span class="line">        System.out.println(<span class="string">"恭喜通过"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>执行流程：</p>
+<ul>
+<li>先执行一次循环操作之后，再进行布尔表达式的判断。</li>
+<li>如果结果为true，则再次执行循环操作。</li>
+<li>如果结果为false，才会退出循环结构，执行后续代码。</li>
+</ul>
+</li>
+<li><p>do while <strong>特点</strong>：</p>
+<ul>
+<li><p>首次没有入口条件，<strong>先执行，再判断</strong>。</p>
+</li>
+<li><p>适用于<strong>循环次数不明确</strong>的场景</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//用 do while 打印100遍 HelloWorld</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestDoWhile</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">    	<span class="keyword">do</span>&#123;<span class="comment">//直接执行循环操作，首次没有入口条件</span></span><br><span class="line">        	System.out.println(<span class="string">"HelloWorld"</span>);</span><br><span class="line">            i++;</span><br><span class="line">        &#125;<span class="keyword">while</span>(i &lt;= <span class="number">100</span>);<span class="comment">//判断满足，则循环。不满足，则至少执行一次（执行次数共 0~n 次）</span></span><br><span class="line">        System.out.println(<span class="string">"程序结束"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="循环的注意点"><a href="#循环的注意点" class="headerlink" title="循环的注意点"></a>循环的注意点</h3><ul>
+<li><p>是否使用循环及使用步骤</p>
+<ul>
+<li><ol>
+<li>明确是否需要使用循环</li>
+<li>分析<strong>循环条件</strong>和<strong>循环操作</strong>是什么        操作：相加求和；条件：0~100</li>
+<li>循环结构的<strong>选型</strong>，用哪个循环           <strong>循环次数是否明确、首次是否需要入口条件</strong></li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>while 与 do while 的对比</p>
+<ul>
+<li><p>首次即有入口条件，先判断，再执行。适用于循环次数明确的场景。（ while ）</p>
+</li>
+<li><p>首次没有入口条件，先执行，再判断。适用于循环次数不明确的场景。（ do while ）</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-for-循环"><a href="#3-for-循环" class="headerlink" title="3. for 循环"></a>3. for 循环</h3><ul>
+<li><p>语法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> ( 初始部分 ； 循环条件 ； 迭代部分 )&#123;</span><br><span class="line">	<span class="comment">//循环操作</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestFor</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">    	<span class="comment">// 1.初始部分   2.循环条件  4.迭代部分</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span> ; i &lt;= <span class="number">100</span> ; i++ )&#123;</span><br><span class="line">        	System.out.println(<span class="string">"HelloWorld"</span> + i);<span class="comment">// 3.循环操作</span></span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"程序结束"</span>);</span><br><span class="line">        <span class="comment">//for循环与while循环相同，首次判断不满足，则一次都不会执行。（执行次数 0~n 次）</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>执行流程：</p>
+<ul>
+<li>首次执行初始部分（仅一次）。</li>
+<li>对布尔表达式进行判断，结果为 true ，则执行逻辑代码。</li>
+<li>本次执行完毕后，执行迭代部分，再次判断，结果仍旧为 true ，则再次执行逻辑代码。</li>
+<li>直至布尔表达式的结果为 false 时，才会退出循环结构，执行后续代码。</li>
+<li><strong>特点</strong>：首次即有入口条件，<strong>先判断、再执行</strong>，适用于<strong>循环次数明确</strong>的情况。（与 while 相同）</li>
+</ul>
+</li>
+</ul>
+<h3 id="【扩展】-用-while-和-for-写死循环"><a href="#【扩展】-用-while-和-for-写死循环" class="headerlink" title="【扩展】 用 while 和 for 写死循环"></a>【扩展】 用 while 和 for 写死循环</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//扩展</span></span><br><span class="line"><span class="keyword">while</span>(<span class="keyword">true</span>)&#123;<span class="comment">//true </span></span><br><span class="line">	<span class="comment">//死循环</span></span><br><span class="line">    System.out.println(<span class="string">"while..."</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (;;)&#123;</span><br><span class="line">	<span class="comment">//死循环</span></span><br><span class="line">    System.out.println(<span class="string">"for..."</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/13/%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/11/Java%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84+%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F/" class="archive-article-date">
-  	<time datetime="2020-04-11T15:11:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-11</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/04/11/Java%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84+%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java选择结构+局部变量</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/11/Java%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84+%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F/">Java选择结构+局部变量</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/11/Java%E5%9F%BA%E7%A1%80%E7%AF%87/" class="archive-article-date">
-  	<time datetime="2020-04-11T15:04:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/11/Java%E5%9F%BA%E7%A1%80%E7%AF%87/">Java基础篇</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/11/Java%E5%89%8D%E7%BD%AE%E5%9F%BA%E7%A1%80/" class="archive-article-date">
-  	<time datetime="2020-04-11T14:54:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/11/Java%E5%89%8D%E7%BD%AE%E5%9F%BA%E7%A1%80/">Java前置基础</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/10/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%EF%BC%8C%E5%88%A9%E7%94%A8%20Hexo%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E9%80%90%E6%AD%A5%E8%AF%A6%E8%A7%A3%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-04-09T16:24:31.784Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/10/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%EF%BC%8C%E5%88%A9%E7%94%A8%20Hexo%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E9%80%90%E6%AD%A5%E8%AF%A6%E8%A7%A3%EF%BC%89/">从零开始，利用 Hexo 搭建个人博客（逐步详解）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/09/This-is-my-first-blog/" class="archive-article-date">
-  	<time datetime="2020-04-09T07:15:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/09/This-is-my-first-blog/">This is my first blog</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/09/hello-world/" class="archive-article-date">
-  	<time datetime="2020-04-09T06:36:17.952Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/09/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -357,8 +386,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
